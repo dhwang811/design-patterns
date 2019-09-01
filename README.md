@@ -1,2 +1,2 @@
-# dhwang-structure
-架构学习代码
+# desin-patterns
+设计模式相关代码
