@@ -15,7 +15,7 @@ public class SimpleSingleton {
         }
     }
 
-    public static SimpleSingleton getInstace()
+    public static SimpleSingleton getInstance()
     {
         return INSTANCE;
     }

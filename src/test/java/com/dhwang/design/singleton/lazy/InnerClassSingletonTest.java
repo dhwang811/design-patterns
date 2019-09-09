@@ -1,6 +1,6 @@
 package com.dhwang.design.singleton.lazy;
 
-import java.lang.reflect.Constructor;
+import com.dhwang.design.singleton.util.ReflectUtils;
 
 /**
  * @author : joe
@@ -12,10 +12,7 @@ public class InnerClassSingletonTest {
         InnerClassSingleton singleton = InnerClassSingleton.getInstance();
         System.out.println(singleton);
         try {
-            Class<?> clazz = InnerClassSingleton.class;
-            Constructor<?> constructor = clazz.getDeclaredConstructor();
-            constructor.setAccessible(true);
-            InnerClassSingleton innerClassSingleton = (InnerClassSingleton) constructor.newInstance();
+            InnerClassSingleton innerClassSingleton = ReflectUtils.getInstance(InnerClassSingleton.class);
             System.out.println(innerClassSingleton);
         } catch (Exception e) {
             e.printStackTrace();

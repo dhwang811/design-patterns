@@ -1,6 +1,6 @@
 package com.dhwang.design.singleton.simple;
 
-import java.lang.reflect.Constructor;
+import com.dhwang.design.singleton.util.ReflectUtils;
 
 /**
  * @author : joe
@@ -11,11 +11,8 @@ public class SimpleSingletonTest {
     public static void main(String[] args) {
 
         try {
-            Class<?> clazz = SimpleSingleton.class;
-            Constructor<?> c = clazz.getDeclaredConstructor();
-            c.setAccessible(true);
-            SimpleSingleton simpleSingleton = (SimpleSingleton) c.newInstance();
-            System.out.println(SimpleSingleton.getInstace() == simpleSingleton);
+            SimpleSingleton simpleSingleton = ReflectUtils.getInstance(SimpleSingleton.class);
+            System.out.println(SimpleSingleton.getInstance() == simpleSingleton);
         } catch (Exception e) {
             e.printStackTrace();
         }
