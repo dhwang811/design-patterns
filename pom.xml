@@ -6,7 +6,13 @@
 
   <groupId>com.dhwang</groupId>
   <artifactId>design-patterns</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>design-factory</module>
+    <module>design-singleton</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,7 +20,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-    <dependencies>
+  <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
